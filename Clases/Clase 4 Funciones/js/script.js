@@ -1,9 +1,14 @@
-//Valores para poder trabajar
+// function solicitarNombre (){
+//     let nombre = prompt('Dime tu nombre:');
+//     alert('Tu nombre es ' + nombre);
+// }
+
+// solicitarNombre();
+
 const maquetaPrecio = parseInt(10000);
 const maquetaStock = 15;
 let maquetaCantidad = prompt('Cuantas unidades quieres comprar:');
 
-//Funcion para calcular la cantidad y el pago
 function agregarAlCarritoYPagar(maqueta, maquetaCantidad) {
     const validarStock = confirmarStock(maquetaCantidad);    
     if (validarStock === 'Hay stock'){        
@@ -15,7 +20,6 @@ function agregarAlCarritoYPagar(maqueta, maquetaCantidad) {
     }
 }
 
-//Validacion de stock
 function confirmarStock(demanda){
     if ((demanda > 0) && (demanda <= maquetaCantidad)) {
         return 'Hay stock';
@@ -24,7 +28,6 @@ function confirmarStock(demanda){
     }
 }
 
-//Cálculos del pago
 function modalidadPago(tipoPago) {
     if (tipoPago === 'EFECTIVO') {
         let totalEfectivo = (maquetaPrecio * maquetaCantidad) - ((maquetaPrecio * maquetaCantidad) * 0.15);
@@ -49,5 +52,7 @@ function modalidadPago(tipoPago) {
     }
 }
 
-// Llamada a la funcion
+
 agregarAlCarritoYPagar('F18 1/32', maquetaCantidad);
+
+
