@@ -26,6 +26,7 @@ function bienvenida(){
 //Acciones del usuario:
 function actividadTienda(){
     accion = prompt('Indica lo que quieres hacer en la tienda:').toLowerCase();
+    
     if (accion === 'comprar'){
         const producto= catalogo.find((maq) => maq.nombre === (prompt('Escribe la maqueta que quieres agregar al carrito (solo el nombre):').toUpperCase()));
         agregarCarrito(producto);
